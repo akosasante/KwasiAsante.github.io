@@ -15,7 +15,8 @@ $headerBoxColor: #FF2014;
 $boldBorder: #ECE9E6;
 $colorShadow: rgba(245, 42, 42, 0.85);
 $greyShadow: rgba(245, 42, 42, 0.15);
-$mainTextColor: #ff443a;
+$headerTextColor: #ff443a;
+$mainTextColor: #380704;
 $buttonGrad1: #DC281E;
 $buttonGrad2: rgb(27, 54, 71);
 $buttonGrad3: #F00000;
@@ -69,7 +70,7 @@ a {
     border: 0.1em $boldBorder solid;
     // box-shadow: 8px 8px $greyShadow;
     padding: 0 5vw;
-    color: $mainTextColor;
+    color: $headerTextColor;
     margin-bottom: 4vh;
     position: relative;
     width: 70vw;
@@ -212,7 +213,7 @@ article p  {
     margin: 5vh 10vw;
     background: lighten(desaturate($articleBg, 15%), 20%);
     box-shadow: 18px 20px $colorShadow;
-    padding: 1em 2em;
+    padding: 1em 2em 2em 2em;
     max-height: 75vh;
     line-height: 1.5;
     font-size: 2vmin; 
@@ -408,7 +409,7 @@ article p  {
 // }
 
 .gallery-entry.active {
-    background: $galleryActive;
+    background: rgba(darken(desaturate($articleBg, 15%), 20%), 0.5);
 }
 
 .gallery-entry {

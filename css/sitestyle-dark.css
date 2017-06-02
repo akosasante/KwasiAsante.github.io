@@ -61,7 +61,7 @@ a {
 .typed-cursor {
   opacity: 0;
   padding-left: 0.1em;
-  border-right: solid 0.05em #ff443a;
+  border-right: solid 0.05em #380704;
   /*height*/
   -webkit-animation: blink 0.7s 5;
   -moz-animation: blink 0.7s 5;
@@ -138,7 +138,7 @@ a {
   width: 60%; }
 
 article p {
-  color: #ff443a;
+  color: #380704;
   font-family: "Lato", sans-serif; }
 
 #sidebar-menu ul {
@@ -168,7 +168,7 @@ article p {
   margin: 5vh 10vw;
   background: white;
   box-shadow: 18px 20px rgba(245, 42, 42, 0.85);
-  padding: 1em 2em;
+  padding: 1em 2em 2em 2em;
   max-height: 75vh;
   line-height: 1.5;
   font-size: 2vmin;
@@ -301,7 +301,7 @@ article p {
 
 #contact-info span {
   font-family: "Lato", sans-serif;
-  color: #ff443a;
+  color: #380704;
   margin-left: 0.3em;
   /*font-size:*/ }
 
@@ -322,10 +322,10 @@ article p {
     opacity: 0;
 }*/
 .gallery-entry.active {
-  background: #464141; }
+  background: rgba(228, 149, 149, 0.5); }
 
 .gallery-entry {
-  color: #ff443a; }
+  color: #380704; }
 
 #project-gallery::-webkit-scrollbar {
   width: .4em; }

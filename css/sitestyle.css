@@ -68,7 +68,7 @@ a {
     opacity: 0;
     padding-left: 0.1em;
     border-right: solid 0.05em #181B48;
-    height
+    /*height*/
     -webkit-animation: blink 0.7s 5;
     -moz-animation: blink 0.7s 5;
     animation: blink 0.7s 5;
@@ -326,9 +326,9 @@ article p  {
     /*font-size:*/
 }
 
-#contact-info i {
-    /*margin-left: 1em;*/
-}
+/*#contact-info i {
+    margin-left: 1em;
+}*/
 
 .scroll-bar-wrap#scroll-small {
   /*width: 300px;*/
@@ -405,6 +405,7 @@ article p  {
 .scroll-bar-wrap:hover .cover-bar {
    opacity: 0;
   -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 /*.project-entry.inactive {

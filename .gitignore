@@ -1,0 +1,6 @@
+**/.sass-cache/
+*.scssc
+*.scss
+*.scss.map
+css/grid.css
+css/slick-theme.css

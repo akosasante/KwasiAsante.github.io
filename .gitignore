@@ -2,5 +2,6 @@
 *.scssc
 *.scss
 *.scss.map
+*.css.map
 css/grid.css
 css/slick-theme.css

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Aldrich|Lato");
 @font-face {
   font-family: PixelText;
-  src: url(fonts/code.ttf); }
+  src: url(../fonts/code.ttf); }
 html, body, * {
   margin: 0;
   padding: 0; }
@@ -25,7 +25,7 @@ a {
   text-align: center; }
 
 #hero-home header {
-  font-family: "Aldrich", monospace;
+  font-family: "PixelText", monospace;
   background: url("../img/head/Asset 1hdpi.png");
   background-color: #FF2014;
   background-blend-mode: screen;
@@ -46,7 +46,7 @@ a {
   border-radius: 0.5em;
   height: 15vh;
   width: 40vw;
-  font-family: "Aldrich", monospace;
+  font-family: "PixelText", monospace;
   font-size: 4vw;
   color: #ffffff;
   border: 0;
@@ -171,7 +171,7 @@ article p {
   padding: 1em 2em 2em 2em;
   max-height: 75vh;
   line-height: 1.5;
-  font-size: 2vmin;
+  font-size: 2.5vmin;
   /*overflow: overlay;*/ }
 
 #about-me-pic img {
@@ -216,7 +216,7 @@ article p {
 #project-expanded {
   background: rgba(228, 149, 149, 0.5);
   padding: 1rem 2em;
-  font-size: 1.8vh;
+  font-size: 2vmin;
   line-height: 1.5;
   width: 50vw;
   height: 70vh;
@@ -249,7 +249,7 @@ article p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 2vw;
+  grid-gap: 0.5vmax 2vmax;
   grid-template-areas: "bye bye"  "linkA linkB" "linkC linkD";
   background: white;
   box-shadow: 18px 20px rgba(245, 42, 42, 0.85);
@@ -284,7 +284,7 @@ article p {
   grid-area: linkD; }
 
 #self-end {
-  font-size: 2vh;
+  font-size: 2.5vmin;
   text-align: center;
   grid-area: bye; }
 

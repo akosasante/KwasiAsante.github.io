@@ -31,7 +31,7 @@ a {
   background-blend-mode: screen;
   border: 0.1em #ECE9E6 solid;
   padding: 0 5vw;
-  color: #ff443a;
+  color: #ff0900;
   margin-bottom: 4vh;
   position: relative;
   width: 70vw;
@@ -117,8 +117,8 @@ a {
 #main {
   display: flex; }
 
-#mid {
-  padding: 1em 0 1em 2em; }
+/*#mid {
+  padding: 1em 0 1em 2em; }*/
 
 .sidebar {
   width: 10vw;
@@ -164,10 +164,15 @@ article p {
   justify-content: space-around;
   height: 100vh; }
 
+.page-section.about-me {
+  background-color: #e30800;
+  background-image: url(https://www.transparenttextures.com/patterns/3px-tile.png);
+}
+
 .about-me article {
   margin: 5vh 10vw;
   background: white;
-  box-shadow: 18px 20px rgba(245, 42, 42, 0.85);
+  box-shadow: 18px 20px rgba(53, 44, 44, 0.85);
   padding: 1em 2em 2em 2em;
   max-height: 75vh;
   line-height: 1.5;
@@ -176,11 +181,16 @@ article p {
 
 #about-me-pic img {
   background: white;
-  box-shadow: 18px 20px rgba(245, 42, 42, 0.85);
+  box-shadow: 18px 20px rgba(53, 44, 44, 0.85);
   /*width: 25vw;*/
   height: 25vh;
   margin-top: 10vh;
   margin-bottom: 5vh; }
+
+.page-section#projects-dest {
+  background-color: #140100;
+  background-image: url(https://www.transparenttextures.com/patterns/back-pattern.png);
+}
 
 #projects h4 {
   font-family: "Aldrich", monospace; }
@@ -198,7 +208,7 @@ article p {
 
 .gallery-entry {
   padding: 1em;
-  transition: background border 1s;
+  transition: background-color 350ms;
   cursor: pointer; }
 
 #project-gallery {
@@ -211,10 +221,15 @@ article p {
   font-size: 1vw;
   /*width: 100%;*/
   /*height: 295px;*/
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  }
 
 #project-expanded {
-  background: rgba(228, 149, 149, 0.5);
+  /*background: rgba(228, 149, 149, 0.5);*/
+  border: 0.15rem double;
+  border-color: #e30800;
+  border-radius: 0.5em;
+  transition: border 750ms ease-in-out;
   padding: 1rem 2em;
   font-size: 2vmin;
   line-height: 1.5;
@@ -245,6 +260,11 @@ article p {
   /*overflow-y: scroll;*/
   height: 30vh; }
 
+.page-section#contact-dest {
+  background-color: #e30800;
+  background-image: url(https://www.transparenttextures.com/patterns/carbon-fibre-v2.png);
+}
+
 #contact-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -252,7 +272,7 @@ article p {
   grid-gap: 0.5vmax 2vmax;
   grid-template-areas: "bye bye"  "linkA linkB" "linkC linkD";
   background: white;
-  box-shadow: 18px 20px rgba(245, 42, 42, 0.85);
+  box-shadow: 18px 20px rgba(53, 44, 44, 0.85);
   width: 70vw;
   min-height: 30vh;
   padding: 5%;
@@ -322,7 +342,9 @@ article p {
     opacity: 0;
 }*/
 .gallery-entry.active {
-  background: rgba(228, 149, 149, 0.5); }
+  background-color: #ff3c36;
+  background-image: url(https://www.transparenttextures.com/patterns/checkered-pattern.png); 
+  }
 
 .gallery-entry {
   color: #380704; }

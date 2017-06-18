@@ -226,10 +226,10 @@ article p {
 
 #project-expanded {
   /*background: rgba(228, 149, 149, 0.5);*/
-  border: 0.15rem double;
+  /*border: 0.15rem double;
   border-color: #e30800;
   border-radius: 0.5em;
-  transition: border 750ms ease-in-out;
+  transition: border 750ms ease-in-out;*/
   padding: 1rem 2em;
   font-size: 2vmin;
   line-height: 1.5;

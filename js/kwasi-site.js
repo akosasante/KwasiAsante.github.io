@@ -79,7 +79,7 @@ $(function () {
             return;
         };
         
-        $("#project-expanded").css("border-color") == "rgb(227, 8, 0)" ?  $("#project-expanded").css({"border-color": "#3e0909"}) : $("#project-expanded").css({"border-color": "#e30800"});
+        // $("#project-expanded").css("border-color") == "rgb(227, 8, 0)" ?  $("#project-expanded").css({"border-color": "#3e0909"}) : $("#project-expanded").css({"border-color": "#e30800"});
        
 
         var active_entry = $(".project-entry.active");

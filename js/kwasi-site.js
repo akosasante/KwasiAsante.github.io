@@ -55,7 +55,7 @@ $(function () {
 
     $(".project-entry.inactive").css({display: "none"});
 
-    $("#sidebar-menu").stick_in_parent();
+    $("#sidebar-top-menu").stick_in_parent();
 
     $('#about-link').click(function () {
         $('#about-dest').animatescroll();

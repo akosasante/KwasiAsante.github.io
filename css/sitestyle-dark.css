@@ -156,10 +156,10 @@ a {
 
 .sidebar {
   height: 10vh;
-  background: -webkit-linear-gradient(left, #ff0900, #e73827);
-  background: -moz-linear-gradient(left, #ff0900, #e73827);
-  background: -o-linear-gradient(left, #ff0900, #e73827);
-  background: linear-gradient(to right, #ff0900, #e73827);
+  background: -webkit-radial-gradient(ellipse, #ff0900, #e73827);
+  background: -moz-radial-gradient(ellipse, #ff0900, #e73827);
+  background: -o-radial-gradient(ellipse, #ff0900, #e73827);
+  background: radial-gradient(ellipse farthest-corner, #ff0900, #e73827);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /*padding: 2rem 0 2rem 2rem;*/
   border-bottom: 0.5vmin solid #ECE9E6;
@@ -184,8 +184,9 @@ article p {
 
 .unord-list {
   display: flex;
+  justify-content: space-evenly;
+  flex-grow: 2;
   align-items: center;
-  margin-left: 25%;
 }
 
 .sidebar div {
@@ -223,7 +224,7 @@ article p {
 
 .page-section.about-me {
   background-color: #e30800;
-  background-image: url(https://www.transparenttextures.com/patterns/3px-tile.png);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 .about-me article {

@@ -199,8 +199,9 @@ article p {
 }
 
 .sidebar div.list-item {
-  margin-left: 5rem;
+  width: 80%;
   height: 100%;
+  text-align: center;
 }
 
 .list-item:first-child {
@@ -434,6 +435,7 @@ article p {
 
 .gallery-entry {
   color: #380704;
+  height: 90%;
 }
 
 #project-gallery::-webkit-scrollbar {

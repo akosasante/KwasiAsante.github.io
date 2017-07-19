@@ -241,7 +241,7 @@ article p {
 
 #about-me-pic img {
   background: white;
-  box-shadow: 18px 20px rgba(53, 44, 44, 0.85);
+  box-shadow: 1em 1em rgba(53, 44, 44, 0.85);
   /*width: 25vw;*/
   height: 25vh;
   margin-top: 10vh;
@@ -325,6 +325,10 @@ article p {
   margin-bottom: 2em;
 }
 
+.project-screens img {
+  width: 100%;
+}
+
 .project-info {
   /*overflow-y: scroll;*/
   height: 30vh;
@@ -349,6 +353,7 @@ article p {
   /*justify-items: center;*/
   align-items: center;
   margin-bottom: 5vh;
+  font-size: 2.5vmin;
   /*display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -359,32 +364,31 @@ article p {
   padding: 1em;
   text-align: center;
   border-width: 0.4vmin 0 0.4vmin 0;
-  border-color: #3e0909;
+  border-color: #c31d1d;
   border-style: dotted;
 }
 
-#email {
-  grid-area: linkA;
-}
-
-#linkedin {
-  grid-area: linkB;
-}
-
-#github {
-  grid-area: linkC;
-}
-
-#resume {
-  grid-area: linkD;
-}
 
 #self-end {
-  font-size: 2.5vmin;
   text-align: center;
   grid-area: bye;
 }
 
+  #email {
+  grid-area: linkA;
+  }
+
+  #linkedin {
+    grid-area: linkB;
+  }
+
+  #github {
+    grid-area: linkC;
+  }
+
+  #resume {
+    grid-area: linkD;
+  }
 
 /*#contact-container {
     width: 50vw;
@@ -395,15 +399,11 @@ article p {
 }
 */
 
-#github, #resume {
-  margin-top: 5%;
-}
-
 #contact-info span {
   font-family: "Lato", sans-serif;
   color: #380704;
   margin-left: 0.3em;
-  /*font-size:*/
+  font-size: 2vmin;
 }
 
 .scroll-bar-wrap#scroll-small {
@@ -490,6 +490,7 @@ article p {
     display: none;
 }*/
 
+
 @media (max-width: 780px) {
   #hero-home {
     justify-content: center;
@@ -498,8 +499,11 @@ article p {
     width: 75vw;
   }
   #start-button {
-    height: 10vh;
+    height: 10vmax;
+    box-shadow: 0px 5px 0px #821812;
+    transform: rotateX(30deg);
   }
+
   .sidebar {
     display: none;
   }
@@ -507,7 +511,7 @@ article p {
     padding: 0;
   }
   .page-section {
-    max-height: 150vh;
+    min-height: 100vh;
     height: auto;
     padding: 4vmin;
     max-width: 100vw;
@@ -545,27 +549,24 @@ article p {
     width: 75vw;
   }
   #contact-info {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: fit-content(50%);
-    grid-template-areas: initial;
-    grid-gap: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 30vmax;
+    align-items: center;
+    padding: 3rem;
     line-height: 2em;
     height: auto;
     max-width: 90vw;
-    padding: 1em;
+    font-size: 5vmin;
   }
-  #email, #linkedin, #github, #resume {
-    grid-area: none;
-    grid-row: auto;
-    border-width: 0.4vmin 0 0 0;
-    border-color: #c31d1d;
-    border-style: dotted;
+
+  .contact-entry {
+    margin-top: 3rem;
   }
-  #self-end {
-    text-align: center;
-    grid-area: none;
-    grid-row: 1;
+
+  #contact-info span {
+    font-size: 4vmin;
   }
 }
 

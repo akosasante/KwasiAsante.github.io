@@ -269,6 +269,10 @@ article p {
   width: 75vw;
 }
 
+#project-mobile-title {
+  display: none;
+}
+
 .gallery-entry {
   padding: 1em;
   transition: background-color 350ms;
@@ -507,6 +511,7 @@ article p {
   .sidebar {
     display: none;
   }
+
   #mid {
     padding: 0;
   }
@@ -520,11 +525,21 @@ article p {
   .about-me article {
     max-height: initial;
     padding: 5vmin;
+    box-shadow: 1em 3em rgba(53, 44, 44, 0.85);
   }
   #projects {
     height: auto;
     box-shadow: 6px 8px rgba(245, 42, 42, 0.85);
-    width: 70vw;
+    width: 60vw;
+    flex-direction: column;
+  }
+  #project-mobile-title {
+    margin-bottom: 2rem;
+    display: block;
+    font-size: 80%;
+    font-family: "Aldrich", monospace;
+    color: #380704;
+    text-align: center;
   }
   #project-expanded {
     display: none;
@@ -534,13 +549,18 @@ article p {
     width: 100%;
     grid-template: auto / 1fr 1fr;
     grid-gap: 2vmin;
-    height: auto;
+    height: 100%;
+    box-sizing: border-box;
   }
   .gallery-entry {
     font-size: 2vw;
   }
   .gallery-entry.inactive {
-    border: 1em outset white;
+    border-style: solid;
+    border-color: whitesmoke;
+    border-width: 0.1rem 0.1rem 0.5rem 0.1rem;
+    box-sizing: border-box;
+    min-height: 100%;
   }
   .gallery-entry:active {
     border: 1em inset #c31d1d;

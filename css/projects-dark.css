@@ -8,10 +8,10 @@ a {
   color: #ffffff; }
 
 body {
-  background: rgba(255, 68, 58, 0.5); }
+  background: #ef2e27 }
 
 nav.mobile-menu {
-  background: radial-gradient(ellipse farthest-corner at 45px 45px, #181b48 0%, #1b3647 90%, #686c8a 100%);
+  background: radial-gradient(ellipse farthest-corner at 45px 45px, #181b48 0%, #223f52 90%, #18205b 100%)
   position: fixed;
   width: 100vw;
   z-index: 100;
@@ -44,7 +44,10 @@ nav.mobile-menu li {
   padding: 1vmin 5vmin; }
 
 .project-page article {
-  padding: 2vmin 5vmin; }
+  padding: 2vmin 5vmin;
+    background: whitesmoke;
+    margin: -0.5rem 1.5rem;
+    padding-top: 1rem;}
 
 .project-page img {
   width: 100vw; }

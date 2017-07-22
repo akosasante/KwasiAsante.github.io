@@ -439,7 +439,7 @@ article p {
 
 .gallery-entry {
   color: #380704;
-  height: 90%;
+  height: 50%;
 }
 
 #project-gallery::-webkit-scrollbar {
@@ -530,7 +530,8 @@ article p {
   #projects {
     height: auto;
     box-shadow: 6px 8px rgba(245, 42, 42, 0.85);
-    width: 60vw;
+    width: 100vw;
+    box-sizing: border-box;
     flex-direction: column;
   }
   #project-mobile-title {
@@ -540,6 +541,8 @@ article p {
     font-family: "Aldrich", monospace;
     color: #380704;
     text-align: center;
+    background: white;
+    box-shadow: 6px 8px rgba(245, 42, 42, 0.85);
   }
   #project-expanded {
     display: none;

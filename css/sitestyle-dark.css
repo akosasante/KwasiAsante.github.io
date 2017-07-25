@@ -410,11 +410,15 @@ article p {
 }
 */
 
-#contact-info span {
+.contact-entry a {
   font-family: "Lato", sans-serif;
   color: #380704;
   margin-left: 0.3em;
   font-size: 2vmin;
+}
+
+contact-entry i {
+  color: #380704;
 }
 
 .scroll-bar-wrap#scroll-small {

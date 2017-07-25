@@ -23,7 +23,7 @@ a {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   font-size: 3vw;
   text-align: center;
@@ -35,10 +35,10 @@ a {
   border: 0.1em #ECE9E6 solid;
   padding: 0 5vw;
   color: #ff0900;
-  margin-bottom: 4vh;
-  position: relative;
-  width: 70vw;
-  bottom: 15%;
+  /* margin-bottom: 4vh; */
+  /* position: relative; */
+   width: 70vw; 
+  /* bottom: 15%; */
   line-height: 3.5em;
   text-shadow: 3px 3px 0 rgba(245, 42, 42, 0.15);
 }
@@ -163,6 +163,7 @@ a {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   /*padding: 2rem 0 2rem 2rem;*/
   border-bottom: 0.5vmin solid #ECE9E6;
+  border-top: 0.5vmin solid #ECE9E6;
   display: flex;
   /*font-size: 90%;
   text-align: center; */

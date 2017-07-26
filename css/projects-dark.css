@@ -13,7 +13,7 @@ a {
 }
 
 nav.mobile-menu {
-  background: radial-gradient(ellipse farthest-corner at 45px 45px, #181b48 0%, #3c1111 90%, #461717 100%);
+  background: radial-gradient(ellipse farthest-corner at 45px 45px, #cc0f0f 0%, #bb3737 90%, #a72525 100%);
   position: fixed;
   width: 100vw;
   z-index: 100;

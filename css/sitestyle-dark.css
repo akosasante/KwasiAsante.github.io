@@ -195,7 +195,7 @@ article p {
   line-height: 4em;
   cursor: pointer;
   color: #ffffff;
-  transition: border 250ms ease-in-out;
+  transition: background 400ms ease-in-out;
 }
 
 .sidebar div.list-item {
@@ -281,7 +281,7 @@ article p {
 }
 
 .gallery-entry img {
-  height: 10vh;
+  width: 100%;
 }
 
 #project-gallery {
@@ -373,9 +373,14 @@ article p {
 .contact-entry {
   padding: 1em;
   text-align: center;
-  border-width: 0.4vmin 0 0.4vmin 0;
+  border-width: 0 0 0.4vmin 0;
   border-color: #c31d1d;
   border-style: dotted;
+  transition: all 900ms;
+}
+
+.contact-entry:hover {
+  background: rgba(210, 48, 48, 0.11);
 }
 
 
@@ -388,16 +393,32 @@ article p {
   grid-area: linkA;
   }
 
+  #email:hover {
+    color: #c7ac13
+  }
+
   #linkedin {
     grid-area: linkB;
+  }
+
+  #linkedin:hover {
+    color: #0077b5;
   }
 
   #github {
     grid-area: linkC;
   }
 
+  #github:hover {
+    color: #6a20ad;
+  }
+
   #resume {
     grid-area: linkD;
+  }
+
+  #resume:hover {
+    color: #e30800;
   }
 
 /*#contact-container {
@@ -409,7 +430,7 @@ article p {
 }
 */
 
-.contact-entry a {
+a.contact-entry {
   font-family: "Lato", sans-serif;
   color: #380704;
   margin-left: 0.3em;

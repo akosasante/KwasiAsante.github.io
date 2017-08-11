@@ -13,18 +13,27 @@ a {
 }
 
 nav.mobile-menu {
-  background: radial-gradient(ellipse farthest-corner at 45px 45px, #cc0f0f 0%, #bb3737 90%, #a72525 100%);
+  background: radial-gradient(ellipse farthest-corner, #ff0900, #e73827);
   position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  box-shadow: 0 0.25em hsla(286, 18%, 13%, .4);
   width: 100vw;
   z-index: 100;
-  padding: 1vmin 0 1vmin 0; }
+  padding: 1vmin 0 1vmin 0;
+  height: 1.5rem; 
+}
+
+nav.mobile-menu.nav-up {
+  top: -1.5rem;
+}
+
 
 nav.mobile-menu ul {
   display: grid;
   list-style-type: none;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  border-bottom: 0.1rem white solid;
   padding-bottom: 0.5rem;
 }
 
@@ -55,7 +64,9 @@ nav.mobile-menu a:visited {
   border: linear-gradient(148deg, rgba(147, 183, 245, 0.35) 0%, #91c8fe 100%); }
 
 .project-page header {
-  padding: 1vmin 5vmin; }
+  color: #fafaff;
+  padding: 1vmin 5vmin; 
+}
 
 .project-page article {
   padding: 2vmin 5vmin;

@@ -336,10 +336,13 @@ article p {
   background: white;
   -webkit-box-shadow: 18px 20px rgba(53, 44, 44, 0.85);
           box-shadow: 18px 20px rgba(53, 44, 44, 0.85);
-  padding: 1em 2em 2em 2em;
+  padding: 3em;
   max-height: 90vh;
   line-height: 1.5;
   font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   /*overflow: overlay;*/
 }
 
@@ -587,14 +590,14 @@ article#projects h4 {
 .page-section.contacts {
   background-color: #e30800;
   background-image: url(https://www.transparenttextures.com/patterns/carbon-fibre-v2.png);
+  height: 85vh;
 }
 
 #about-me-pic {
   display: flex;
   justify-content: center;
-  grid-row-end: 3;
   z-index: 200;
-  height: 130%;
+  height: 140%;
 }
 
 #contact-info {
@@ -603,7 +606,7 @@ article#projects h4 {
           box-shadow: 18px 20px rgba(53, 44, 44, 0.85);
   width: 70vw;
   min-height: 30vh;
-  padding: 5%;
+  padding: 10% 5% 5%;
   /*justify-items: center;*/
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -622,9 +625,9 @@ article#projects h4 {
   border-width: 0 0 0.4vmin 0;
   border-color: #c31d1d;
   border-style: dotted;
-  -webkit-transition: all 900ms;
-  -o-transition: all 900ms;
-  transition: all 900ms;
+  -webkit-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
 }
 
 .contact-entry:hover {
@@ -637,7 +640,7 @@ article#projects h4 {
   }
 
   #email:hover {
-    color: #c7ac13
+    color: #e30800;
   }
 
   #linkedin:hover {
@@ -649,7 +652,7 @@ article#projects h4 {
   }
 
   #resume:hover {
-    color: #e30800;
+    color: #c7ac13;
   }
 
 /*#contact-container {
@@ -679,7 +682,7 @@ contact-entry i {
   }
 
   #about-me-pic {
-    grid-row: 2 / 3;
+    grid-row: 1 / 3;
     grid-column: 4 / 10;
   }
 

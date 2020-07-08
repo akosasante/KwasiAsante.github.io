@@ -94,23 +94,7 @@
 //     $(".project-entry.inactive").css({display: "none"});
 //
 //     $("#sidebar-top-menu").stick_in_parent();
-//
-//     $('#about-link').click(function () {
-//         $('#about-dest').animatescroll();
-//     });
-//
-//     $('#start-button').click(function () {
-//         $('#mid').animatescroll();
-//     });
-//
-//     $('#projects-link').click(function () {
-//         $('#projects-dest').animatescroll();
-//     });
-//
-//     $('#contact-link').click(function () {
-//         $('#contact-dest').animatescroll();
-//     });
-//
+
 //     $(".gallery-entry").click(function () {
 //         var curr_gal_entry = this;
 //         if ( $(this).hasClass("active") ) {
@@ -180,22 +164,46 @@ function setStickyHeader() {
         }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function setupTitleTyped() {
     Typed.new('#header-info', {
         strings: ["Developer. ^500 Gamer. ^500 Enthusiast."],
         typeSpeed: 20,
         cursorChar: ''
     });
+}
 
-    /* Sticky menu bar on desktop */
+function setupStickyMenu() {
+    /* Sticky menu bar only on desktop */
     if (window.matchMedia("(min-width: 780px)").matches) {
         menuBar = document.getElementById('sidebar-top-menu')
         stickyAt = menuBar.offsetTop;
     }
-});
-
-if (window.matchMedia("(min-width: 780px)").matches) {
     window.onscroll = function () {
         setStickyHeader()
     };
 }
+
+function scrollToListenerFactory(linkId, destinationId) {
+    document.getElementById(linkId).addEventListener('click', e => {
+        e.preventDefault()
+        document.getElementById(destinationId).scrollIntoView({behavior: "smooth"})
+        document.getElementById(destinationId).focus({preventScroll: true})
+    })
+}
+
+function setupScrollToLinks() {
+    const scrollableLinks = new Map([
+      ['about-link', 'about-dest'],
+        ['projects-link', 'projects-dest'],
+        ['contact-link', 'contact-dest']
+    ]);
+    for (const [linkId, destId] of scrollableLinks) {
+        scrollToListenerFactory(linkId, destId)
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    setupTitleTyped()
+    setupStickyMenu()
+    setupScrollToLinks()
+});

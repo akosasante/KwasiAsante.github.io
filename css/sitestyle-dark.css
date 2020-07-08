@@ -202,6 +202,17 @@ a {
   text-align: center; */
 }
 
+.sidebar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sidebar.sticky + #mid {
+  padding-top: 102px;
+}
+
 .sidebar.nav-up {
   top: -4rem;
 }
@@ -442,15 +453,15 @@ article#projects h4 {
   background-image: url(https://www.transparenttextures.com/patterns/checkered-pattern.png);
 }
 
-#project-expanded .slick-list draggable {
-  width: inherit;
-  height: inherit;
-}
+/*#project-expanded .slick-list draggable {*/
+/*  width: inherit;*/
+/*  height: inherit;*/
+/*}*/
 
-#project-gallery .slick-list draggable {
-  width: inherit;
-  height: 90%;
-}
+/*#project-gallery .slick-list draggable {*/
+/*  width: inherit;*/
+/*  height: 90%;*/
+/*}*/
 
 #project-gallery .slick-track {
   -webkit-transform: translate3d(0px, 0px, 0px);
@@ -674,7 +685,7 @@ a.contact-entry {
   font-size: 1.3rem;
 }
 
-contact-entry i {
+.contact-entry i {
   color: #380704;
 }
 
@@ -809,8 +820,8 @@ contact-entry i {
 
   #start-button {
     height: 10vmax;
-    -webkit-box-shadow: 0px 5px 0px #821812;
-    box-shadow: 0px 5px 0px #821812;
+    -webkit-box-shadow: 0 5px 0 #821812;
+    box-shadow: 0 5px 0 #821812;
     -webkit-transform: rotateX(30deg);
     transform: rotateX(30deg);
   }
@@ -847,7 +858,7 @@ contact-entry i {
     justify-content: flex-start;
   }
 
-  .about-me page-section {
+  .about-me .page-section {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;

@@ -29,19 +29,19 @@
 readers do not read off random characters that represent icons */
 
 .fa-envelope-open-text:before {
-  content: "\\f658";
+  content: "\f658";
 }
 
 .fa-file-signature:before {
-  content: "\\f573";
+  content: "\f573";
 }
 
 .fa-github-square:before {
-  content: "\\f092";
+  content: "\f092";
 }
 
 .fa-linkedin:before {
-  content: "\\f08c";
+  content: "\f08c";
 }
 
 @font-face {

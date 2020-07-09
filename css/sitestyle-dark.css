@@ -131,6 +131,17 @@ a.download-link:hover, a.download-link:visited {
   z-index: 300;
 }
 
+.sidebar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.sidebar.sticky + #mid {
+  padding-top: 102px;
+}
+
 #sidebar-top-menu img {
   width: 90px;
 }

@@ -21,6 +21,18 @@ a {
   text-decoration: none;
 }
 
+a.download-link {
+  color: #0a2b4c;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+
+a.download-link:hover, a.download-link:visited {
+  color: #91a4ff;
+  font-weight: initial;
+  font-family: 'Lato', sans-serif;
+}
+
 /*****************************************************+
 *                                                     *
 *             Home Page Hero Title                    *
@@ -567,6 +579,8 @@ article#projects h4 {
 .project-info {
   /*overflow-y: scroll;*/
   height: 30vh;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 @supports (display: grid) {

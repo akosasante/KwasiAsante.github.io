@@ -1,24 +1,3 @@
-// function initializeMobileGallery() {
-//     $("#projects-dest").append('<div class="swiper-container"></div>');
-//     $(".swiper-container").append('<div class="swiper-wrapper">').append('<div class="swiper-pagination"></div>').append('<div class="swiper-button-prev"></div>').append('<div class="swiper-button-next"></div>').append('<div class="swiper-scrollbar"></div>');
-//     $(".project-entry img").each(function () {
-//         $(".swiper-wrapper").append('<div class="swiper-slide"></div>');
-//         $(".swiper-slide").append(this).append('<div class="caption">ExplainExplaoinExplain</div>');
-//     });
-//
-//     mySwiper = new Swiper ('.swiper-container', {
-//         loop: false,
-//         direction: 'vertical',
-//         pagination: '.swiper-pagination',
-//         nextButton: '.swiper-button-next',
-//         prevButton: '.swiper-button-prev',
-//         scrollbar: '.swiper-scrollbar',
-//         slidesPerView: 1,
-//         autoHeight: true,
-//         centeredSlides: true
-//     });
-// }
-
 // $(function () {
 //     if (window.matchMedia("(max-width: 780px)").matches) {
 //         $(".gallery-entry.active").toggleClass("active inactive");
@@ -161,10 +140,8 @@ function setupTitleTyped() {
 
 function setupStickyMenu() {
   /* Sticky menu bar only on desktop */
-  if (window.matchMedia("(min-width: 780px)").matches) {
-    menuBar = document.getElementById('sidebar-top-menu')
-    stickyAt = menuBar.offsetTop;
-  }
+  menuBar = document.getElementById('sidebar-top-menu')
+  stickyAt = menuBar.offsetTop;
   window.onscroll = function () {
     setStickyHeader()
   };
@@ -233,9 +210,34 @@ function setupGalleryLinks() {
   }
 }
 
+function setupMobileStyles() {
+  const body = document.getElementsByTagName('body')[0];
+  body.classList.add('is-mobile')
+
+  // wrap each project thumbnail with a link/anchor tag for mobile project pages.
+  const projectThumbnails = document.getElementsByClassName('gallery-entry')
+  for (const project of projectThumbnails) {
+    const projectId = project.id.slice(-1);
+    const link = document.createElement('a');
+    link.setAttribute('href', `project${projectId}.html`)
+    project.parentNode.insertBefore(link, project);
+    project.classList.remove('active')
+    link.appendChild(project);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   setupTitleTyped()
-  setupStickyMenu()
   setupScrollToLinks()
-  setupGalleryLinks()
+
+  if (window.matchMedia("(min-width: 780px)").matches) {
+    // is desktop
+    setupStickyMenu()
+    setupGalleryLinks()
+  }
+
+  if (window.matchMedia("(max-width: 780px)").matches) {
+    // is mobile
+    setupMobileStyles()
+  }
 });

@@ -453,6 +453,10 @@ article#projects h4 {
   background-image: url(https://www.transparenttextures.com/patterns/checkered-pattern.png);
 }
 
+.gallery-entry.inactive:hover {
+  background: #ff8884;
+}
+
 /*#project-expanded .slick-list draggable {*/
 /*  width: inherit;*/
 /*  height: inherit;*/
@@ -488,6 +492,7 @@ article#projects h4 {
   border-color: #e30800;
   border-radius: 0.5em;
   transition: border 750ms ease-in-out;*/
+  position: relative;
   padding: 1rem 2em;
   font-size: 1.2rem;
   line-height: 1.5;
@@ -506,6 +511,22 @@ article#projects h4 {
   -ms-flex-align: center;
   align-items: center;
   overflow-y: scroll;
+}
+
+.project-entry {
+  -webkit-transition: opacity 400ms;
+  -o-transition: opacity 400ms;
+  transition: opacity 400ms;
+  position: absolute;
+  top: 0;
+}
+
+.project-entry.active {
+  opacity: 100;
+}
+
+.project-entry.inactive {
+  opacity: 0;
 }
 
 .project-screens {
@@ -558,7 +579,7 @@ article#projects h4 {
     overflow: auto;
   }
 
-  #projects {
+  article#projects {
     padding: 0;
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -570,7 +591,6 @@ article#projects h4 {
             "sidebar project project project";
     overflow: hidden;
     height: 90% !important;
-    /*grid-gap: 1rem;*/
   }
 
   #project-gallery {

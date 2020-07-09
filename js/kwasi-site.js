@@ -1,16 +1,3 @@
-// var controller = new ScrollMagic.Controller();
-
-// $(function () {
-//     var scene = new ScrollMagic.Scene({triggerElement: ".sidebar"})
-//                 .setPin("#sidebar-menu", {pushFollowers: false})
-//                 .addIndicators({name: "this is the pin"})
-//                 .addTo(controller);
-// });
-
-// $.ajaxSetup({
-//   cache: true
-// });
-
 // function initializeMobileGallery() {
 //     $("#projects-dest").append('<div class="swiper-container"></div>');
 //     $(".swiper-container").append('<div class="swiper-wrapper">').append('<div class="swiper-pagination"></div>').append('<div class="swiper-button-prev"></div>').append('<div class="swiper-button-next"></div>').append('<div class="swiper-scrollbar"></div>');
@@ -93,7 +80,6 @@
 //
 //     $(".project-entry.inactive").css({display: "none"});
 //
-//     $("#sidebar-top-menu").stick_in_parent();
 
 //     $(".gallery-entry").click(function () {
 //         var curr_gal_entry = this;
@@ -202,8 +188,53 @@ function setupScrollToLinks() {
     }
 }
 
+function galleryLinkListener(thumbnailId, projectId) {
+        const clickedThumbnail = document.getElementById(thumbnailId);
+        const clickedEntry = document.getElementById(projectId);
+        const currentlyActiveThumbnail = document.getElementsByClassName('gallery-entry active')[0];
+        const currentlyActiveEntry = document.getElementsByClassName('project-entry active')[0];
+        const projectContainer = document.getElementById('project-expanded')
+        if (Array.from(clickedThumbnail.classList).includes('inactive')) {
+            // Mark the currently active thumbnail as inactive. Main effect is that the background-color will go away
+            currentlyActiveThumbnail.classList.add('inactive')
+            currentlyActiveThumbnail.classList.remove('active')
+
+            // Mark the currently active project entry as inactive and scroll to top.
+            currentlyActiveEntry.classList.add('inactive')
+            currentlyActiveEntry.classList.remove('active')
+            projectContainer.scrollTop = 0;
+
+            // Mark the clicked thumbnail as active. Main effect is that the thumbnail cell will gain a bg color
+            clickedThumbnail.classList.add('active')
+            clickedThumbnail.classList.remove('inactive')
+
+            // Mark the project entry whose thumbnail was clicked as active. should become visible in the gallery container
+            clickedEntry.classList.add('active')
+            clickedEntry.classList.remove('inactive')
+        }
+}
+
+function galleryLinksListenerFactory(thumbnailId, projectId) {
+    document.getElementById(thumbnailId).addEventListener('click', e => {
+        e.preventDefault()
+        galleryLinkListener(thumbnailId, projectId)
+    })
+}
+
+function setupGalleryLinks() {
+    const galleryLinks = new Map([
+      ['gal-1', 'entry-1'],
+      ['gal-2', 'entry-2'],
+      ['gal-3', 'entry-3']
+    ])
+    for (const [linkId, entryId] of galleryLinks) {
+        galleryLinksListenerFactory(linkId, entryId)
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     setupTitleTyped()
     setupStickyMenu()
     setupScrollToLinks()
+    setupGalleryLinks()
 });

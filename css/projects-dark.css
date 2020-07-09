@@ -35,7 +35,6 @@ nav.mobile-menu.nav-up {
   top: -2.5rem;
 }
 
-
 nav.mobile-menu ul {
   display: grid;
   list-style-type: none;
@@ -43,14 +42,21 @@ nav.mobile-menu ul {
   justify-items: center;
   padding-bottom: 0.5rem;
   align-items: center;
+  height: 100%;
 }
 
 nav.mobile-menu li {
-  display: inline;
+  display: inline-block;
   font-family: 'Aldrich', monospace;
   font-size: 0.6rem;
   color: whitesmoke;
   font-weight: bold;
+}
+
+nav.mobile-menu a {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 nav.mobile-menu a:visited {
@@ -67,9 +73,10 @@ nav.mobile-menu a:visited {
 }
 
 .home-link {
-  border-style: dotted;
-  border-width: 0 0.5vw 0 0.5vw;
-  padding: 0 1.5vw 0 1.5vw;
+  border: 0.5vw dotted whitesmoke;
+  border-top: 0;
+  border-bottom: 0;
+  padding: 0 2.5vw 0 2.5vw;
 }
 
 .project-page header {
